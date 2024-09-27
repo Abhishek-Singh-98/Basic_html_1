@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test Page</title>
+        <style>
+            * {
+                margin: 0;
+                background-color: rgb(152, 240, 218);
+            }
+
+            .fixed_box {
+                background-color: rgb(143, 139, 139);
+                border-bottom: 5px solid black;
+                position: sticky;
+                top: 0;
+                /* border: 5px solid black; */
+                padding: 20px;
+                width: 100%;
+            }
+
+            .box {
+                border: 5px solid black;
+                height: 350px;
+                width: 350px;  
+                box-sizing: content-box;
+                outline: 10px solid blue;
+                outline-offset: 10px;
+                position: relative;
+                /* bottom: 100px;
+                right: 500px; */
+                left: 50px;
+                top: 100px;
+                border-radius: 10px;
+                overflow: auto;
+            }
+
+            .second_box {
+                border: 2px solid yellow;
+                margin: 0;
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 50%;
+                width: 50%;
+                background-image: url("images/image.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: -90px 0px;
+                border-radius: 10px;
+            }
+
+            .pseudo_select {
+                height: 25px;
+                width: 50%;
+                border: 2px solid grey;
+                margin: 0px 500px;
+            }
+
+            .pseudo_select:hover {
+                background-color: green;
+            }
+
+            .pseudo_select:not(.noselect) {
+                background-color: white;
+            }
+
+            .pseudo_select:nth-child(5) {
+                background-color: greenyellow;
+            }
+
+            .box1 {
+                height:200px;
+                width: 200px;
+                border: 4px solid grey;
+                position: relative;
+                margin: 50px;
+                background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,85,121,1) 28%, rgba(14,193,131,1) 100%);
+
+            }
+
+            .box1::before {
+                content: ' ';
+                height:100%; 
+                width: 100%;
+                background-image: url("images/squirel_funny.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: -50px 0px;
+                border-left: 4px solid black;
+                border-top: 4px solid black;
+                position: absolute;
+                display: block;
+                top: 40px;
+                left: 50px;
+            }
+
+            .grid {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                row-gap:10px;
+                column-gap: 10px;
+                margin: 10px 0px;
+                width: 100%;
+            }
+            .item {
+                border: 2px solid rgb(152, 240, 218);
+                color: rgb(58, 56, 56);
+                font-size: 20px;
+                font-weight: bold;
+            }
+            .footer {
+                height: 20px;
+                padding: 0% 0% 0% 85%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="fixed_box"><strong>Monkey Web</strong></div>
+        <div class="box">
+            <div class="second_box"></div>
+                <p style="padding-right: 51%;">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, et eum fugit explicabo excepturi molestias amet accusantium animi quibusdam autem adipisci ea beatae incidunt cumque vero fuga provident accusamus harum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, et eum fugit explicabo excepturi molestias amet accusantium animi quibusdam autem adipisci ea beatae incidunt cumque vero fuga provident accusamus harum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, et eum fugit explicabo excepturi molestias amet accusantium animi quibusdam autem adipisci ea beatae incidunt cumque vero fuga provident accusamus harum.
+                </p>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, et eum fugit explicabo excepturi molestias amet accusantium animi quibusdam autem adipisci ea beatae incidunt cumque vero fuga provident accusamus harum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, et eum fugit explicabo excepturi molestias amet accusantium animi quibusdam autem adipisci ea beatae incidunt cumque vero fuga provident accusamus harum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, et eum fugit explicabo excepturi molestias amet accusantium animi quibusdam autem adipisci ea beatae incidunt cumque vero fuga provident accusamus harum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, et eum fugit explicabo excepturi molestias amet accusantium animi quibusdam autem adipisci ea beatae incidunt cumque vero fuga provident accusamus harum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, et eum fugit explicabo excepturi molestias amet accusantium animi quibusdam autem adipisci ea beatae incidunt cumque vero fuga provident accusamus harum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, et eum fugit explicabo excepturi molestias amet accusantium animi quibusdam autem adipisci ea beatae incidunt cumque vero fuga provident accusamus harum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, et eum fugit explicabo excepturi molestias amet accusantium animi quibusdam autem adipisci ea beatae incidunt cumque vero fuga provident accusamus harum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, et eum fugit explicabo excepturi molestias amet accusantium animi quibusdam autem adipisci ea beatae incidunt cumque vero fuga provident accusamus harum.
+                </p>
+            </div>
+
+            <div class="pseudo_select noselect">Monkey A</div>
+            <div class="pseudo_select">Monkey B</div>
+            <div class="pseudo_select noselect">Monkey C- Already selected</div>
+            <div class="pseudo_select noselect">Monkey D</div>
+        <div> 
+            
+        <div class="box1"></div>
+
+        <hr>
+        <div class="grid">
+            <div class="item">Contact Us : +919831454355</div>
+            <div class="item">Terms & Conditions</div>
+            <div class="item item_logo"><img src="images/logo.png" style="height: 30px; width: 30px;"> <img src="images/email_icon.png" style="height: 30px; width: 30px; transform: translate(5px, 0px)"></div>
+            <div class="item">Fawaami Apartment, Kalamaserry,<br>Kochi, Kerala, 682022</div>
+            <div class="item">Career</div>
+            <div class="item">support@zudolo.ai</div>
+            <div class="item">Monday to Sunday (10AM to 7PM)</div>
+            <div class="item">Relevant FAQ</div>
+        </div>
+        <div class="footer">Zudolo&copy;copyright-2024</div>
+    </body>
+</html>
